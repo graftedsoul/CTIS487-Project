@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomFragmentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".BottomFragment">
+
+    <TextView
+        android:id="@+id/textSongNameBF"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:text="@string/artistSongName"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textBackgroundBottomPinkBF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textBackgroundBottomPinkBF"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageSkipPreviousBF"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSongNameBF"
+        app:srcCompat="@drawable/ic_baseline_skip_previous_28" />
+
+    <ImageView
+        android:id="@+id/imagePlayBF"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageSkipPreviousBF"
+        app:layout_constraintTop_toBottomOf="@+id/textSongNameBF"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_28" />
+
+    <ImageView
+        android:id="@+id/imageSkipNextBF"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagePlayBF"
+        app:layout_constraintTop_toBottomOf="@+id/textSongNameBF"
+        app:srcCompat="@drawable/ic_baseline_skip_next_28" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spinKitLoader"
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSongNameBF"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <ImageView
+        android:id="@+id/imageVolumeDownBF"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sliderVolumeBF"
+        app:layout_constraintTop_toBottomOf="@+id/textSongNameBF"
+        app:srcCompat="@drawable/ic_baseline_volume_mute_24" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/sliderVolumeBF"
+        android:layout_width="180dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="1dp"
+        android:outlineSpotShadowColor="@color/white"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        android:value="50.0"
+        app:labelBehavior="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageVolumeUpBF"
+        app:layout_constraintTop_toTopOf="@+id/textBackgroundBottomPinkBF"
+        app:thumbColor="@color/light_green"
+        app:trackColorActive="@color/light_green"
+        app:trackColorInactive="@color/light_grey"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageVolumeUpBF"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textBackgroundBottomPinkBF"
+        app:layout_constraintEnd_toEndOf="@+id/textBackgroundBottomPinkBF"
+        app:layout_constraintTop_toBottomOf="@+id/textSongNameBF"
+        app:srcCompat="@drawable/ic_baseline_volume_up_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
