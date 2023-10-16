@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteListActivity">
+
+    <fragment
+        android:id="@+id/fragmentTopNL"
+        android:name="com.ipek.gunaltay.project.TopFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_top" />
+
+    <Button
+        android:id="@+id/buttonBackNL"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/backName"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_baseline_arrow_back_24"
+        app:iconTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/fragmentTopNL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fragmentTopNL"
+        app:layout_constraintVertical_bias="0.110000014" />
+
+    <ImageView
+        android:id="@+id/imageDeleteNL"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fragmentTopNL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17000002"
+        app:srcCompat="@drawable/ic_twotone_delete_24"
+        app:tint="#FFC107" />
+
+    <Button
+        android:id="@+id/buttonNewNoteNL"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/newNote"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_twotone_add_28"
+        app:iconGravity="end"
+        app:iconTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/fragmentTopNL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="@+id/buttonBackNL"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.120000005" />
+
+    <EditText
+        android:id="@+id/editSearchNoteNL"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/pink"
+        android:drawableStart="@drawable/ic_twotone_search_24"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/searchForNote"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingHorizontal="5dp"
+        android:textColorHint="@color/dark_grey"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fragmentTopNL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fragmentTopNL"
+        app:layout_constraintTop_toTopOf="@+id/fragmentTopNL"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textNoteFolderTitleNL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lemon"
+        android:text="@string/noteFolderTitle"
+        android:textColor="@color/almost_black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentTopNL" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerNotesNL"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:foregroundGravity="center"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentBottomNL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNoteFolderTitleNL" />
+
+    <fragment
+        android:id="@+id/fragmentBottomNL"
+        android:name="com.ipek.gunaltay.project.BottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout="@layout/fragment_bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editLayout"
+    android:layout_width="380dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textBackgroundCyanVN"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#71D1A8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageStarVN"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textBackgroundCyanVN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toEndOf="@+id/textNoteNameVN"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_star_24"
+        app:tint="@color/light_yellow" />
+
+    <ImageView
+        android:id="@+id/imageNoteVN"
+        android:layout_width="59dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textBackgroundCyanVN"
+        app:layout_constraintEnd_toStartOf="@+id/textNoteNameVN"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textBackgroundCyanVN"
+        app:srcCompat="@drawable/note" />
+
+    <TextView
+        android:id="@+id/textNoteNameVN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lemon"
+        android:text="@string/noteName"
+        android:textColor="@color/almost_black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textBackgroundCyanVN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollViewNoteVN"
+        android:layout_width="match_parent"
+        android:layout_height="350sp"
+        app:layout_constraintTop_toBottomOf="@+id/textBackgroundCyanVN"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/textNoteContentVN"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonDeleteVN"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/deleteName"
+        app:backgroundTint="@color/pink"
+        app:icon="@drawable/ic_twotone_delete_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewNoteVN"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonEditVN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="@string/editName"
+        android:textColor="@color/almost_black"
+        app:backgroundTint="@color/light_green"
+        app:icon="@drawable/ic_baseline_edit_24"
+        app:iconTint="@color/almost_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewNoteVN" />
+</androidx.constraintlayout.widget.ConstraintLayout>

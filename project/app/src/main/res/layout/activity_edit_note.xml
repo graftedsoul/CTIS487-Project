@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditNoteActivity">
+
+    <fragment
+        android:id="@+id/fragmentTopEN"
+        android:name="com.ipek.gunaltay.project.TopFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_top" />
+
+    <Button
+        android:id="@+id/buttonBackEN"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/backName"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_baseline_arrow_back_24"
+        app:iconTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/fragmentTopEN"
+        app:layout_constraintEnd_toEndOf="@+id/fragmentTopEN"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="@+id/fragmentTopEN"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.120000005" />
+
+    <Button
+        android:id="@+id/buttonSaveEN"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:text=""
+        app:icon="@drawable/ic_twotone_save_24"
+        app:iconSize="36dp"
+        app:iconTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/fragmentTopEN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fragmentTopEN"
+        app:layout_constraintVertical_bias="0.060000002"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textBackgroundGreyEditTextEN"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentTopEN" />
+
+    <EditText
+        android:id="@+id/editNoteTitleEN"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:backgroundTint="@color/medium_grey"
+        android:ems="10"
+        android:hint="@string/enterNote"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textBackgroundGreyEditTextEN"
+        app:layout_constraintEnd_toEndOf="@+id/textBackgroundGreyEditTextEN"
+        app:layout_constraintStart_toStartOf="@+id/textBackgroundGreyEditTextEN"
+        app:layout_constraintTop_toTopOf="@+id/textBackgroundGreyEditTextEN" />
+
+    <TextView
+        android:id="@+id/textBackgroundGreySpinnerEN"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBackgroundGreyEditTextEN" />
+
+    <Spinner
+        android:id="@+id/spinnerFolderEN"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textBackgroundGreySpinnerEN"
+        app:layout_constraintEnd_toEndOf="@+id/textBackgroundGreySpinnerEN"
+        app:layout_constraintStart_toStartOf="@+id/textBackgroundGreySpinnerEN"
+        app:layout_constraintTop_toTopOf="@+id/textBackgroundGreySpinnerEN"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textBackgroundCyanUpperTabEN"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/cyan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBackgroundGreySpinnerEN" />
+
+    <TextView
+        android:id="@+id/textBackgroundGreenNoteEN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/bright_green"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentBottomEN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBackgroundCyanUpperTabEN" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textBackgroundGreenNoteEN"
+        app:layout_constraintEnd_toEndOf="@+id/textBackgroundGreenNoteEN"
+        app:layout_constraintStart_toStartOf="@+id/textBackgroundGreenNoteEN"
+        app:layout_constraintTop_toBottomOf="@+id/textBackgroundCyanUpperTabEN"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editNoteContentEN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/bright_green"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                tools:layout_conversion_absoluteHeight="45dp"
+                tools:layout_conversion_absoluteWidth="408dp"
+                tools:layout_editor_absoluteX="2dp"
+                tools:layout_editor_absoluteY="312dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <fragment
+        android:id="@+id/fragmentBottomEN"
+        android:name="com.ipek.gunaltay.project.BottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_bottom" />
+
+    <TextView
+        android:id="@+id/textAddNotesEN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/addNotesHere"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textBackgroundCyanUpperTabEN"
+        app:layout_constraintEnd_toEndOf="@+id/textBackgroundCyanUpperTabEN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textBackgroundCyanUpperTabEN" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

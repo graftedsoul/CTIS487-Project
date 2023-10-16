@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">project</string>
+    <string name="bold_button"><b>B</b></string>
+    <string name="italic_button"><i>I</i></string>
+    <string name="underline_button"><u>U</u></string>
+    <string name="addNotesHere"><![CDATA[You can add your notes here :>]]></string>
+    <item name="backName" type="string">Back</item>
+    <item name="enterNote" type="string">Enter note title...</item>
+    <item name="folderTitle" type="string">Folders</item>
+    <item name="optionsName" type="string">Options</item>
+    <item name="newFolderName" type="string">New Folder</item>
+    <item name="searchForT" type="string">Search for a folder title...</item>
+    <item name="playMusic" type="string">Play Music</item>
+    <item name="musicVolume" type="string">Music Volume</item>
+    <item name="musicTheme" type="string">Select Music Theme</item>
+    <item name="noteFolderTitle" type="string">Note Folder Title</item>
+    <item name="searchForNote" type="string">Search for a note...</item>
+    <item name="newNote" type="string">New Note</item>
+    <item name="noteName" type="string">Note name</item>
+    <item name="deleteName" type="string">Delete</item>
+    <item name="editName" type="string">Edit</item>
+    <item name="unsavedChanges" type="string">Unsaved changes!</item>
+    <item name="wantToDiscard" type="string">There are unsaved changes. Do you want to discard them?</item>
+    <item name="discardName" type="string">Discard</item>
+    <item name="cancelName" type="string">Cancel</item>
+    <item name="artistSongName" type="string">C148 - Dog</item>
+    <item name="keepName" type="string">Keep</item>
+    <item name="wantToKeep" type="string">Do you want to keep the notes?</item>
+    <item name="createName" type="string">Create</item>
+    <item name="folderName" type="string">Folder Name</item>
+    <item name="createNewFolder" type="string">Creating New Folder</item>
+    <item name="noteTitle" type="string">Note Title</item>
+    <item name="noteContent" type="string">Note content Note content</item>
+    <item name="areYouSure" type="string">Are you sure?</item>
+    <item name="wantToDelete" type="string">Are you sure want to delete selected folders?</item>
+</resources>
